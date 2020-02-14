@@ -27,10 +27,10 @@ RSpec.describe 'as a visitor', type: :feature do
     it 'can fill out a form to add an actors name' do
       visit "/movies/#{@lucasfilm_movie1.id}"
 
-      within "#actor_name_form" do
-        fill_in :actor_name, with: "Hayden Christensen"
+      within '#actor_name_form' do
+        fill_in :actor_name, with: 'Hayden Christensen'
 
-        click_on "Submit Name"
+        click_on 'Submit Name'
 
         expect(current_path).to eq("/movies/#{@lucasfilm_movie1.id}")
       end
