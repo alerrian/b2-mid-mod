@@ -8,8 +8,8 @@ RSpec.describe Movie, type: :model do
   end
 
   describe 'relationships' do
-    it { should belong_to :studios }
-    it { should have_many(:actors).through(:actor_movies) }
-    it { should have_many :actor_movies }
+    it { should belong_to :studio }
+    it { should have_many :movie_actors }
+    it { should have_many(:actors).through(:movie_actors) }
   end
 end
