@@ -1,0 +1,16 @@
+<h1> @movie.name </h1>
+
+<section id="movie_info">
+  <p>Name: <%= @movie.name %></p>
+  <p>Release Year: <%= @movie.year %></p>
+  <p>Genre: <%= @movie.genre %></p>
+</section>
+
+<section id="movie_actors">
+  <h1>Actors in this Movie</p>
+  <% @movie.sorted_actors.each do |actor| %>
+    <%= actor.name %>
+  <% end %>
+</section>
+
+<section id="average_actor_age">
