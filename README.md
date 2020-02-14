@@ -11,13 +11,6 @@ Overview
 We are creating an application to track movies. We have  **studios, which have movies**, and movies have several actors, and actors can be in several movies.
 Read each story carefully.
 
-# Story 3
-As a user, 
-When I visit a movie's show page.
-I see the movie's name, creation year, and genre, 
-and a list of all its actors from youngest to oldest.
-And I see the average age of all of the movie's actors 
-
 # Story 4
 As a user,
 When I visit a movie show page,
@@ -31,4 +24,3 @@ And I see the actor's name listed
 As a user,
 When I visit an actor's show page
 I see a unique list of all of the actors this particular actor has worked with.
-Collapse
