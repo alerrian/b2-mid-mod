@@ -13,6 +13,6 @@ class Movie < ApplicationRecord
   end
 
   def average_age
-    require 'pry'; binding.pry
+    actors.average(:age)
   end
 end
