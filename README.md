@@ -11,11 +11,6 @@ Overview
 We are creating an application to track movies. We have  **studios, which have movies**, and movies have several actors, and actors can be in several movies.
 Read each story carefully.
 
-# Story 2
-As a user,
-When I visit an actor's show page,
-I see their name, their age, and a list of the names of all of the movies they are in.
-
 # Story 3
 As a user, 
 When I visit a movie's show page.
