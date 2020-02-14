@@ -9,5 +9,11 @@
   <% @actor.movies.each do |movie| %>
     <%= movie.name %>
   <% end %>
+</section>
 
+<section id="worked_with">
+  <h1>Worked With<h1>
+  <%= @actor.worked_with.each do |actor| %>
+    <p><%= actor.name %></p>
+  <% end %>
 </section>

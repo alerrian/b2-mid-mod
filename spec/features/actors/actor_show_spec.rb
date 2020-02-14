@@ -98,5 +98,13 @@ RSpec.describe 'as a user', type: :feature do
         expect(page).to have_content('The Last Jedi')
       end
     end
+
+    it 'can see who this actor has worked with' do
+      visit "/actors/#{@actor2.id}"
+
+      within "#worked_with" do
+        expect(page).to have_content('Ewan McGregor')
+      end
+    end
   end
 end
