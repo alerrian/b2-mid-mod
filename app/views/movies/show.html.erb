@@ -16,3 +16,12 @@
 <section id="average_actor_age">
   <p>Average Age: <%= @movie.average_age %></p>
 </section>
+
+<section id="actor_name_form">
+  <%= form_tag "/movies/#{@movie.id}", method: :patch do %>
+    <%= label_tag :actor_name %>
+    <%= text_field_tag :actor_name %>
+
+    <%= submit_tag "Submit Name" %>
+  <% end %>
+</section>
