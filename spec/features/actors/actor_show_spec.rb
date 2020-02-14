@@ -38,6 +38,13 @@ RSpec.describe 'as a user', type: :feature do
         studio_id: @disney.id
       )
 
+      @disney_movie3 = Movie.create!(
+        name: 'The Last Jedi',
+        year: '2016',
+        genre: 'Sci-Fi',
+        studio_id: @disney.id
+      )
+
       @actor1 = Actor.create!(
         name: 'Mark Hamill',
         age: 68
@@ -62,6 +69,7 @@ RSpec.describe 'as a user', type: :feature do
       MovieActor.create!(actor_id: @actor2.id, movie_id: @lucasfilm_movie1.id)
       MovieActor.create!(actor_id: @actor4.id, movie_id: @lucasfilm_movie1.id)
       MovieActor.create!(actor_id: @actor3.id, movie_id: @disney_movie2.id)
+      MovieActor.create!(actor_id: @actor3.id, movie_id: @disney_movie3.id)
     end
 
     it 'can see information about an actor' do
@@ -74,6 +82,20 @@ RSpec.describe 'as a user', type: :feature do
 
       within "#movies" do
         expect(page).to have_content('A New Hope')
+      end
+    end
+
+    it 'can see information about an actor' do
+      visit "/actors/#{@actor3.id}"
+
+      within "#actor_info" do
+        expect(page).to have_content('Daisy Ridley')
+        expect(page).to have_content(25)
+      end
+
+      within "#movies" do
+        expect(page).to have_content('The Force Awakens')
+        expect(page).to have_content('The Last Jedi')
       end
     end
   end
