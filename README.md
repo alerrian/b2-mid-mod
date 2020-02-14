@@ -11,12 +11,6 @@ Overview
 We are creating an application to track movies. We have  **studios, which have movies**, and movies have several actors, and actors can be in several movies.
 Read each story carefully.
 
-# Story 1
-As a user, 
-When I visit the studio index page
-I see a list of all of the movie studios 
-And underneath each studio, I see the names of all of its movies.
-
 # Story 2
 As a user,
 When I visit an actor's show page,
